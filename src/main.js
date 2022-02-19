@@ -6,7 +6,7 @@ import store from './Store'
 
 function createSocket(username, age) {
     // create new websocket for url ws://api.evelyn.red:8080/gateway
-    const ws = new WebSocket('ws://api.evelyn.red:8080/gateway');
+    const ws = new WebSocket('ws://165.227.107.161:8080/gateway');
 
     console.log(ws);
 
@@ -70,6 +70,6 @@ function createSocket(username, age) {
     };
 }
 
-createSocket("joe", 25);
+createSocket("Christian", 13);
 
 createApp(App).use(router).use(Vuex).mount('#app')

@@ -9,7 +9,7 @@
 <script>
 
 export default {
-  name: 'message',
+  message: undefined,
 }
 
 </script>
@@ -30,6 +30,6 @@ element{
 	padding: 12px;
 	border-radius: 25%;
 	border: 2px whitesmoke solid;
-	.background: blue;
+	background: blue;
 }
 </style>
