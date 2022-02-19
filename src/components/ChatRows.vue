@@ -15,7 +15,7 @@ export default {
   name: 'ChatRows',
   data() {
   	return {
-  		chats: ["Conversation 1","Conversation 2", "Conversation 3"]
+  		chats: ["Conversation 1","Conversation 2", "Conversation 3", "Conversation 4"]
   	}
   },
   components: {
@@ -34,6 +34,7 @@ div {
 	height: 100%;
 	padding: 15px;
 	box-sizing: border-box;
+	overflow-y: scroll;
 }
 
 </style>

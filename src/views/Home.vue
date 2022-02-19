@@ -3,6 +3,7 @@
 		<Header />
 	<section class="main">
 	<element>
+		<Board />
 		<ChatRows />
 	</element>
 	<element>
@@ -15,13 +16,15 @@
 	import Header from '../components/Header.vue'
 	import ChatRows from '../components/ChatRows.vue'
 	import ChatView from '../components/ChatView.vue'
+	import Board from '../components/Board.vue'
 
 export default {
   name: 'Home',
   components: {
     Header, 
     ChatRows,
-    ChatView
+    ChatView,
+    Board
   }
 }
 </script>

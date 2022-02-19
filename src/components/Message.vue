@@ -3,6 +3,7 @@
 		<h4>
 			<slot></slot>
 		</h4>
+		<element>X</element>
 	</div>
 </template>
 <script>
@@ -23,5 +24,11 @@ color: black;
 	margin-bottom: 12px;
 	box-sizing: content-box;
 }
-
+element{
+	position: absolute;
+	padding: 12px;
+	border-radius: 25%;
+	border: 2px whitesmoke solid;
+	.background: blue;
+}
 </style>
