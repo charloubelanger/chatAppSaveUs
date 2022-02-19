@@ -62,7 +62,6 @@ box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width:  100%;
 	height: 100%;
 	border-radius: 23px;
 	padding: 16px;
@@ -71,7 +70,6 @@ box-sizing: border-box;
 }
 
 .messageView {
-		width:  100%;
 	display: flex;
 	flex-direction: column;
 		height: 80%;
