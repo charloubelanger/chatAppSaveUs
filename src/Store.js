@@ -5,7 +5,8 @@ export default new Vuex.Store({
       session_id: "",
       username: "",
       connection: null,
-      token: ""
+      token: "",
+      messages: []
   },
   mutations: {
  Connect (state) {

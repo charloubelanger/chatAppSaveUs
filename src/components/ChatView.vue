@@ -44,7 +44,7 @@ let config = {
     'content' : this.message
   }
 }
- 			 	axios.post(`http://165.227.107.161:8080/${store.state.session_id}/messages`, JSON.stringify({message: this.message}), config)
+ 			 	axios.post(`https://api.evelyn.red/${store.state.session_id}/messages`, JSON.stringify({message: this.message}), config)
  			 .then((response) => {
   console.log(response);
 }, (error) => {
