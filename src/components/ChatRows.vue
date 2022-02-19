@@ -39,7 +39,7 @@ h3{
 }
 div {
 	padding: 15px;
-		overflow-y: scroll;
+	overflow-y: none;
 }
 img {
 	border-radius: 12px;
