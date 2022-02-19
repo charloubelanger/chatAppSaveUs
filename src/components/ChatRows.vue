@@ -4,8 +4,7 @@
 		<section>
 		<ChatRow v-for="chat in chats" :key='chat'>
 					<article>
-				<img src="" width="50" height="50">
-				<h3>{{ chat }}</h3>
+				<img src="../assets/yellowy1.jpg" width="60" height="60">
 			</article>
 		</ChatRow>
 	</section>
@@ -18,7 +17,7 @@ export default {
   name: 'ChatRows',
   data() {
   	return {
-  		chats: ["Conversation 1","Conversation 2", "Conversation 3", "Conversation 4"]
+  		chats: ["Conv 1","Conv 2", "Conv 3", "Conv 4"]
   	}
   },
   components: {
@@ -30,6 +29,8 @@ export default {
 		article{
 	display: flex;
 		align-items: center;
+		justify-content: center;
+		flex-direction: column;
 		gap:  5px;
 }
 h3{
@@ -37,10 +38,19 @@ h3{
 	font-size: 16px;
 }
 div {
-	width:  100%;
-	height: 100%;
 	padding: 15px;
-		overflow: hidden;
+		overflow-y: scroll;
+}
+img {
+	border-radius: 12px;
+}
+section{
+	  display: grid;
+	  grid-template-columns: repeat(auto-fit, 100px) ;
+	   grid-template-rows: 100px;
+  grid-gap: 5px;
+  overflow-y: scroll;
+  
 }
 
 </style>

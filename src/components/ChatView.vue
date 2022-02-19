@@ -11,7 +11,7 @@
 	</section>
 	<section class="messageBar">
 		 <textarea v-model="message" placeholder="Ecrivez un message" ></textarea>
-		 <button @click='sendMessage("Hey")'>
+		 <button @click='sendMessage()'>
 		 	<h4>Send</h4>
 		 </button>
 	</section>
@@ -36,25 +36,21 @@ export default {
   	Message
   },
   methods: {
-  	sendMessage(message) {
- 			 	console.log(message)
-  	},
-  	async load() {
-  		await store.dispatch('setConnection')
-  		const {
-  			data: { messages }
-  		} = await axios.get(`http://${store.session_id}/messages`, {
-  			header: {
-  				'Authorization' : `${store.token}`
-  			}
-  		});
-  		this.messages = messages
-  			console.log(messages)
-  	}
-  },
-  beforeMount() {
+  	sendMessage() {
 
- 		this.load()
+let config = {
+  headers: {
+    'Authorization': store.state.token,
+    'content' : this.message
+  }
+}
+ 			 	axios.post(`http://165.227.107.161:8080/${store.state.session_id}/messages`, JSON.stringify({message: this.message}), config)
+ 			 .then((response) => {
+  console.log(response);
+}, (error) => {
+  console.log(error);
+});
+  	}
 
   }
   }

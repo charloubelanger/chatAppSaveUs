@@ -17,16 +17,13 @@ export default new Vuex.Store({
       console.log(event.data)
        state.session_id = JSON.parse(event.data).session_id
     }
-    
     },
     GuestAuth (state) {
       let user_USERNAME = "Candy"
       state.username = user_USERNAME
       state.connection.send(JSON.stringify({"op":2,"d":{"username":`${user_USERNAME}`,"age":100}}))
        state.connection.onmessage = function(event) {
-      console.log(event.data)
       state.token = JSON.parse(event.data).token
-      console.log(JSON.parse(event.data).token)
      }
     }
    
