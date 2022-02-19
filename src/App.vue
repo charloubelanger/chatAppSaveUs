@@ -4,11 +4,19 @@
 
 <script>
 import Home from './views/Home.vue'
-
+import store from './Store'
 export default {
   name: 'App',
   components: {
     Home
+  },
+  data() {
+    return {
+      connection: null
+    }
+  },
+  created() {
+   store.dispatch('setConnection')
   }
 }
 </script>

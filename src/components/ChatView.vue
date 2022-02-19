@@ -4,13 +4,14 @@
 		<div class="titleView">
 			<h2>This is a conversation</h2>
 		</div>
+		<hr>
 		<Message v-for="message in messages" :key="message" class="message">
-			{{message.d.username}}
+		Hey
 		</Message>
 	</section>
 	<section class="messageBar">
 		 <textarea v-model="message" placeholder="Ecrivez un message" ></textarea>
-		 <button @click='sendMessage({"op":2,"d":{"username":"Username","age":100}} )'>
+		 <button @click='sendMessage("Hey")'>
 		 	<h4>Send</h4>
 		 </button>
 	</section>
@@ -19,7 +20,8 @@
 <script>
 import Message from "./Message"
 //import uuidv4 from "uuid/v4"
-import axios from "axios";
+import axios from 'axios'
+import store from "@/Store"
 
 export default {
   name: 'ChatView',
@@ -27,8 +29,7 @@ export default {
   	return {
   		messages: [],
   		message: "",
-  		connection: null,
-  		session_id: ""
+  	
   	}
   },
   components: {
@@ -36,36 +37,26 @@ export default {
   },
   methods: {
   	sendMessage(message) {
-  		console.log(this.connection)
-  		this.connection.send(message)
-  		console.log(message)
-
+ 			 	console.log(message)
   	},
   	async load() {
-    		const {
-    			data: { messages }
-    		} = await axios.get(`http://165.227.107.161:8080/${self.session_id}/messages`, {
-      	headers: {
-      		'Authorization' : 'B1B7E320-2EA9-4231-85B5-59F27FFB66471645244174'
-      	}
-      });
-    		this.messages = messages
-    },
+  		await store.dispatch('setConnection')
+  		const {
+  			data: { messages }
+  		} = await axios.get(`http://${store.session_id}/messages`, {
+  			header: {
+  				'Authorization' : `${store.token}`
+  			}
+  		});
+  		this.messages = messages
+  			console.log(messages)
+  	}
   },
+  beforeMount() {
 
- 	created() {
- 		this.connection = new WebSocket("ws://165.227.107.161:8080/gateway")
+ 		this.load()
 
- 		this.connection.onopen = function(event) {
- 			//var userID = uuidv4(); 
- 			console.log(event)
- 			console.log("Successfully connected")
- 		}
- 		this.connection.onmessage = function(event) {
- 			self.session_id = event.data.session_id
- 			console.log(event.data)
- 		}
- 	}
+  }
   }
 
 </script>
@@ -77,11 +68,12 @@ textarea {
 	margin: 12px;
 	padding: 8px;
 	color: grey;
-	border: 1px solid rgba(55, 0, 211, 1.0);
-	border-radius: 8px;
+	background: rgb(10, 10, 10);
+border:  none;
 	background: transparent;
 	box-sizing: border-box;
 	resize: none;
+	outline: none;
 }
 
 .messageBar {
@@ -89,8 +81,7 @@ textarea {
 	justify-content: space-around;
 	align-items: flex-start;
 height: 20%;
-width: 80%;
-margin: auto;
+	width:  100%;
 box-sizing: border-box;
 }
 .chatView {

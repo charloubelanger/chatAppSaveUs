@@ -1,11 +1,14 @@
 <template>
 	<div>
 		<h4>Ongoing conversations</h4>
+		<section>
 		<ChatRow v-for="chat in chats" :key='chat'>
 					<article>
-				<img src="" width="50" height="50">{{ chat }}
+				<img src="" width="50" height="50">
+				<h3>{{ chat }}</h3>
 			</article>
 		</ChatRow>
+	</section>
 	</div>
 </template>
 <script>
@@ -29,12 +32,15 @@ export default {
 		align-items: center;
 		gap:  5px;
 }
+h3{
+	padding-left: 12px;
+	font-size: 16px;
+}
 div {
 	width:  100%;
 	height: 100%;
 	padding: 15px;
-	box-sizing: border-box;
-	overflow-y: scroll;
+		overflow: hidden;
 }
 
 </style>

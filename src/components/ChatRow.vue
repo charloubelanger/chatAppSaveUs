@@ -22,6 +22,7 @@ box-shadow:  2px 2px 20px rgba(8,8,8,1),
 	max-height: 8vh;
 	border-radius: 12px;
 	padding: 5px;
+
 	margin-bottom: 12px;
 	box-sizing: border-box;
 	overflow: hidden;

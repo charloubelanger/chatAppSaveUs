@@ -3,14 +3,19 @@
 		<article>
 		<img src="" width="60" height="60">
 		<h2>
-			UserName
+			{{ username }}
 			</h2>
 		</article>
 		<nav>
 			<ul>
+			<li @click="Connect">
+					<a id="guest" href="#">
+						Continue as Anonymous
+					</a>
+				</li>
 				<li>
 					<a href="#">
-						Professional Log In
+						Switch to Professional
 					</a>
 				</li>
 				<li>
@@ -23,9 +28,20 @@
 	</div>
 </template>
 <script>
+import store from '@/Store.js';
 
 export default {
-  name: 'Header'
+  name: 'Header',
+  data(){
+  	return{
+  		username: "Guest"
+  	}
+  },
+  methods: {
+  	Connect() {
+  		store.dispatch('auth2')
+  	}
+  }
 }
 </script>
 <style scoped>
@@ -68,5 +84,8 @@ a {
 	text-decoration: none;
 	color: white;
 	font-size: 18px;
+}
+#guest {
+	color: rgba(60,79,255, 1);
 }
 </style>

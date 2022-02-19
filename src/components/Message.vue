@@ -26,6 +26,7 @@ color: black;
 }
 element{
 	position: absolute;
+	font-size: 32px;
 	padding: 12px;
 	border-radius: 25%;
 	border: 2px whitesmoke solid;
