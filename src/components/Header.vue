@@ -10,12 +10,12 @@
 			<ul>
 			<li @click="Connect">
 					<a id="guest" href="#">
-						Continue as Anonymous
+						Continuer en anonymat
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						Switch to Professional
+						Professionels
 					</a>
 				</li>
 				<li>
@@ -34,7 +34,7 @@ export default {
   name: 'Header',
   data(){
   	return{
-  		username: "Guest"
+  		username: "Anonyme"
   	}
   },
   methods: {

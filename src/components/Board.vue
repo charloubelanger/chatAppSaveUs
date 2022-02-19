@@ -1,6 +1,6 @@
 <template>
 	<div>
-			<h4>Board of feelings</h4>
+			<h4>Que se passe-t-il?</h4>
 		<section>
 		<article v-for="feel in feelings" :key="feel">
 	<i class="material-icons">
@@ -19,7 +19,7 @@ export default {
   name: 'Board',
   data() {
   	return {
-  		feelings: [{category: "Danger", icon:"electric_bolt"},{category: "Harassment", icon:"visibility"}, {category: "Stress", icon:"track_changes"}, {category: "Fear", icon:"settings_accessibility"}]
+  		feelings: [{category: "Danger", icon:"electric_bolt"},{category: "Intimidation", icon:"visibility"}, {category: "Stress", icon:"track_changes"}, {category: "Peur", icon:"settings_accessibility"}]
   	}
   }
 }

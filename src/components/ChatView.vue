@@ -2,11 +2,13 @@
   <div class="chatView">
     <section class="messageView">
       <div class="titleView">
-        <h2>This is a conversation</h2>
+        <h2>Bienvenue</h2>
       </div>
-      <div class="message messageColumn" v-for="message in messages" :key="message">
-		<h3 v-text="message.author.username + ' - ' + message.author.age + ' ans '"></h3>
-		<h3 v-text="message.content"></h3>
+      <div class="message messageColumn" v-for="message in messages" :key="message.content">
+	  <div>
+		<h4>{{message.author.username}} - {{message.author.age}} ans</h4>
+		<p>{{message.content}}</p>
+	  </div>
       </div>
       <hr />
     </section>
@@ -108,7 +110,6 @@ textarea {
 .messageColumn {
   color: white;
   text-align: left;
-  height: 60px;
   background: #070707;
 }
 

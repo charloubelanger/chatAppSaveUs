@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h4>Ongoing conversations</h4>
+		<h4>Conversations</h4>
 		<section>
 		<ChatRow v-for="chat in chats" :key='chat'>
 					<article>
