@@ -6,7 +6,7 @@ import store from './Store'
 
 function createSocket(username, age) {
     // create new websocket for url ws://api.evelyn.red:8080/gateway
-    const ws = new WebSocket('ws://165.227.107.161:8080/gateway');
+    const ws = new WebSocket('wss://api.evelyn.red/gateway');
 
     console.log(ws);
 
