@@ -44,7 +44,8 @@ textarea {
 }
 
 .message {
-		padding:  8px;
+	max-width:  60%;
+	padding:  8px;
 	background: white;
 	height: 6vh;
 	margin: 5px;

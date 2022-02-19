@@ -18,7 +18,7 @@ div {
 	display: flex;
 	align-items: center;
 	max-height: 8vh;
-	border-radius: 1px;
+	border-radius: 12px;
 	padding: 5px;
 	margin-bottom: 12px;
 	box-sizing: border-box;
