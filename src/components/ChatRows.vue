@@ -31,15 +31,18 @@ export default {
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		gap:  5px;
 }
 h3{
 	padding-left: 12px;
 	font-size: 16px;
 }
+h4{
+	padding-top: 12px;
+}
 div {
-	padding: 15px;
-	overflow-y: none;
+	margin: auto;
+	padding: 0px;
+	background: #101010;
 }
 img {
 	border-radius: 12px;

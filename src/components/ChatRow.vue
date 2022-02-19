@@ -14,8 +14,6 @@ export default {
 </script>
 <style scoped>
 div {
-box-shadow:  2px 2px 20px rgba(8,8,8,1),
-             -2px -2px 20px rgba(5,5,5,1);
 	display: flex;
 	align-items: center;
 	border-radius: 12px;

@@ -64,9 +64,8 @@ textarea {
 	margin: 12px;
 	padding: 8px;
 	color: grey;
-	background: rgb(10, 10, 10);
-border:  none;
-	background: transparent;
+	background: #222222;
+	border:  none;
 	box-sizing: border-box;
 	resize: none;
 	outline: none;
@@ -79,6 +78,7 @@ border:  none;
 height: 20%;
 	width:  100%;
 box-sizing: border-box;
+	background: #050505;
 }
 .chatView {
 	display: flex;
@@ -88,7 +88,6 @@ box-sizing: border-box;
 	border-radius: 23px;
 	padding: 16px;
 	box-sizing: border-box;
-
 }
 
 .messageView {
@@ -102,12 +101,15 @@ box-sizing: border-box;
 	color: white;
 	text-align: left;
 	height: 60px;
+	background: #070707;
 }
 button {
 	color: grey;
-	background: none;
+	background: #222222;
 	border: none;
-	padding: 3px;
+	margin-top: 12px;
+	margin-right: 5%;
+	height: 4vh;
 }
 
 

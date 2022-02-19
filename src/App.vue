@@ -45,4 +45,22 @@ h4 {
    color: rgb(60, 79, 255);
 }
 
+::-webkit-scrollbar {
+   width: 15px;
+}
+
+::-webkit-scrollbar-track {
+   background: #111111; 
+}
+
+::-webkit-scrollbar-thumb {
+   background: #555555; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: #555555; 
+}::-webkit-scrollbar {
+   width: 10px;
+}
+
 </style>
