@@ -46,7 +46,7 @@ export default {
 	flex-grow: 1;
 }
 .main element:nth-child(2) {
-	flex-grow: 3;
+	flex-grow: 5;
 
 }
 element{

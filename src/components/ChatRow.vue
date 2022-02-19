@@ -14,13 +14,15 @@ export default {
 </script>
 <style scoped>
 div {
-	background: rgba(20, 20, 20, 1.0);
+	background: #171717;
+box-shadow:  20px 20px 60px #141414,
+             -20px -20px 60px #1a1a1a;
 	display: flex;
 	align-items: center;
 	max-height: 8vh;
 	border-radius: 12px;
 	padding: 5px;
-	margin-bottom: 12px;
+	margin-bottom: 24px;
 	box-sizing: border-box;
 	overflow: hidden;
 }

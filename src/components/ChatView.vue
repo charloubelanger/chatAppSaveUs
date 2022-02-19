@@ -4,9 +4,9 @@
 		<div class="titleView">
 			<h2>This is a conversation</h2>
 		</div>
-		<div v-for="message in messages" :key="message" class="message">
-			<h4>{{message}}</h4>
-		</div>
+		<Message v-for="message in messages" :key="message" class="message">
+			{{message}}
+		</Message>
 	</section>
 	<section class="messageBar">
 		 <textarea></textarea>
@@ -17,6 +17,7 @@
 	</div>
 </template>
 <script>
+import Message from "./Message"
 
 export default {
   name: 'ChatView',
@@ -24,6 +25,9 @@ export default {
   	return {
   		messages: ["Hey", "Hi", "How are you^"]
   	}
+  },
+  components: {
+  	Message
   }
 }
 
@@ -43,15 +47,6 @@ textarea {
 	resize: none;
 }
 
-.message {
-	max-width:  60%;
-	padding:  8px;
-	background: white;
-	height: 6vh;
-	margin: 5px;
-	border-radius: 23px;
-
-}
 .messageBar {
 	display: flex;
 	justify-content: space-around;

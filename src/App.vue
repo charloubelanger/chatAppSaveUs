@@ -24,4 +24,17 @@ export default {
   box-sizing: border-box;
 
 }
+h1 {}
+h2{
+  font-size: 24px;
+  color: whitesmoke;
+}
+h3{
+  font-size: 18px;
+  color: gray;
+}
+h4 {
+   color: rgb(60, 79, 255);
+}
+
 </style>
